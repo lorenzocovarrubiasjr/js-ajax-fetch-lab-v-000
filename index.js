@@ -40,7 +40,9 @@ function createIssue() {
       }
    ).then(res => console.log(res));
 
-}
+   getIssues();
+   
+  }
 
 function getIssues() {
   const el = document.querySelector('#results a');
