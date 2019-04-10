@@ -55,6 +55,6 @@ function getIssues() {
       }).then(res => res.json()).then(json => document.getElementById('issues').innerHTML = json);
 
   const issuesList = `<ul> ${json.map(issue => '<li>' + i.title + i.body + '</li>').join('')}</ul>`;
-  debugger 
+  debugger
      document.getElementById('issues').innerHTML = issuesList
 }
