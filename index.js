@@ -41,7 +41,7 @@ function createIssue() {
    ).then(res => console.log(res));
 
    getIssues();
-   
+
   }
 
 function getIssues() {
