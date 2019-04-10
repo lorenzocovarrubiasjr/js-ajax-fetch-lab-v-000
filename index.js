@@ -30,14 +30,13 @@ function createIssue() {
     title: document.getElementById('title').value,
     body: document.getElementById('body').value
   };
-debugger
  fetch(el.dataset.issuesurl.replace('{/number}',''),
       {
         method: 'POST',
         body: JSON.stringify(postData),
         headers: {
                   Authorization: `token ${getToken()}`
-                }
+                }  
       }
    ).then(res => console.log(res));
 
@@ -55,5 +54,5 @@ function getIssues() {
       debugger
 
   const issuesList = `<ul> ${json.map(issue => '<li>' + i.title + i.body + '</li>').join('')}</ul>`;
-     document.getElementById('issues').innerHTML = issuesList
+     document.getElementById('issues').innerHTML = issuesList 
 }
