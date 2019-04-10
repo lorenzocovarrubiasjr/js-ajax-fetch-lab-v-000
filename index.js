@@ -53,8 +53,8 @@ function getIssues() {
             Authorization: `token ${getToken()}`
                 }
       }).then(res => res.json()).then(json => document.getElementById('issues').innerHTML = json);
-      debugger
 
   const issuesList = `<ul> ${json.map(issue => '<li>' + i.title + i.body + '</li>').join('')}</ul>`;
+  debugger 
      document.getElementById('issues').innerHTML = issuesList
 }
